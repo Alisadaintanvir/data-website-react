@@ -1,0 +1,30 @@
+body {
+    color: rgba(0, 0, 0, .65);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    background-color: #fff;
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum", "tnum";
+}
+
+table{
+    overflow-x: scroll;
+}
+
+th{
+    width: 300px;
+    padding: 10px 15px;
+    text-align: start;
+}
+
+td{
+    width: 300px;
+    padding: 8px 15px;
+}
+
+.active{
+    background-color: rgb(14 165 233);
+    color: white;
+}

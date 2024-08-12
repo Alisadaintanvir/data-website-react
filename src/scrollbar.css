@@ -1,0 +1,15 @@
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f9f9f9; /* Light gray */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a9a9a9; /* Dark gray */
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(127, 127, 127); /* Darker gray on hover */
+  }

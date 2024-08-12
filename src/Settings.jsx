@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Image } from 'lucide-react';
+import { Image, AlignJustify } from 'lucide-react';
 
 function Settings() {
   const [showMenu, setShowMenu] = useState(false);
@@ -15,10 +15,12 @@ function Settings() {
         </button>
       </nav>
 
-      <div className="flex flex-col lg:flex-row md:mx-32 md:mt-4 mb-4">
-        
+      <div className="flex flex-col sm:flex-row lg:mx-32 sm:mt-4 mb-4">
+      <div className='bg-white sm:hidden flex justify-between items-center h-14 px-4'><div>Your preferences</div><AlignJustify/></div>
           <div className="w-52">
+          
             <div>
+              
               <div className='px-3 flex items-center h-11 text-sm cursor-pointer rounded-sm text-md font-semibold text-gray-700 hover:bg-blue-100 hover:text-blue-400 transition duration-300 ease-out hover:ease-out'>Basic info</div>
               <div className='px-3 flex items-center h-11 text-sm cursor-pointer rounded-sm text-md font-semibold text-gray-700 hover:bg-blue-100 hover:text-blue-400 transition duration-300 ease-out hover:ease-out'>Plan & Billings</div>
               {/* Add more filter options as needed */}
@@ -26,7 +28,7 @@ function Settings() {
           </div>
       
 
-        <div className="flex-grow bg-white ml-4">
+        <div className="flex-grow bg-white ml-4 mr-4 lg:mr-0">
           <div >
             <h2 className="text-xl font-medium text-gray-700 px-4 py-5">Basic info</h2>
             <div className="border-t border-gray-300 py-6 px-4">
