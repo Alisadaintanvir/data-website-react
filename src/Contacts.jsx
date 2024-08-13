@@ -3,10 +3,9 @@ import './scrollbar.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaFilter } from "react-icons/fa";
 import { GoTriangleLeft, GoTriangleDown, GoTriangleRight } from "react-icons/go";
-import { faMagnifyingGlass, faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import { X } from 'lucide-react';
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { X, Search, Filter } from 'lucide-react';
 
 const Contacts = ({ toggleSec, toggleCreateNewProperty, toggleCreateNewContact, toggleExport }) => {
   const [page, setPage] = useState(1);
@@ -37,11 +36,11 @@ const Contacts = ({ toggleSec, toggleCreateNewProperty, toggleCreateNewContact, 
             <div className="sm:relative md:w-52 mb-2 md:mb-0 mr-3 w-full">
               <input placeholder="Search contact" className="block w-[150px] lg:w-full px-2 py-[5px] border border-gray-300 rounded-md" type="text" />
               <span className="absolute lg:right-2 top-[77px] left-[152px] lg:left-auto lg:top-1/2 transform -translate-y-1/2">
-                <FontAwesomeIcon icon={faMagnifyingGlass} className='text-sm text-gray-400'/>
+              <Search size={16}  className='text-xs text-gray-400'/>
               </span>
             </div>
 
-            <div className=' sm:ml-0 ml-[250px]'><FaFilter onClick={toggleVisibility} className='sm:hidden cursor-pointer mt-2 text-lg'/></div>
+            <div className=' sm:ml-0 ml-[250px]'><Filter size={20} onClick={toggleVisibility} className='sm:hidden cursor-pointer mt-2 text-lg'/></div>
             
             
             <div  className={`absolute sm:flex w-full sm:w-auto top-0 left-0 p h-full sm:relative bg-white transition-all duration-300 ${

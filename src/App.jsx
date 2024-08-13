@@ -4,7 +4,7 @@ import Dashboard from './Dashboard';
 import Company from './Company';
 import ContactsSection from './ContactsSection';
 import Settings from './Settings';
-import Search from './Search';
+import SearchSection from './SearchSection';
 import Lists from './Lists';
 import Enrich from './Enrich';
 import Verify from './Verify';
@@ -38,7 +38,7 @@ export default function App() {
         {/* Default route */}
         <Route path="/" element={<Navigate to="/dashboard" />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search" element={<SearchSection />} />
         <Route path="/contacts" element={<ContactsSection />} />
         <Route path="/lists" element={<Lists />} />
         <Route path="/companies" element={<Company />} />
