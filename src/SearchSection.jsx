@@ -10,7 +10,7 @@ export default function SearchSection(){
       };
 
     return(
-        <div className='bg-gray-50'>
+        <div className='bg-gray-50 -full'>
         <nav className="flex justify-between items-center px-4 py-3 bg-white shadow-sm border-b border-gray-200">
         <div id="second-section-header" className="hidden lg:flex text-2xl font-semibold ml-4">Search</div>
         <div className="flex mx-3">
@@ -38,7 +38,7 @@ export default function SearchSection(){
       </nav>
 
 
-            <LeadSearch/>
+            <LeadSearch className="h-[100vh]"/>
 
 
         </div>
