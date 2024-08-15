@@ -1,11 +1,11 @@
-import LeadsSeachFilter from "./LeadsSearchFilter";
+import LeadSearchFilter from "./LeadSearchFilter";
 import LeadTable from "./LeadTable";
 
 
 export default function LeadsSearch(){
     return(
         <div className="flex">
-            <LeadsSeachFilter />
+            <LeadSearchFilter />
             <LeadTable/>
         </div>
     );
