@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { MapPin, UserRoundSearch, CircleArrowOutUpLeft } from 'lucide-react';
 import OptionFilterNoSearch from './OptionFilterNoSearch'; // Import the new component
 import YearFilter from './YearFilter';
+import OptionFilter from './OptionFilter';
 
 const LeadSearchFilter = () => {
   const [includedOptions, setIncludedOptions] = useState({
@@ -195,14 +196,18 @@ const LeadSearchFilter = () => {
           </div>
           <div className="filter-options font-medium mb-5">
             {/* Country Option */}
-            <OptionFilterNoSearch
+            <OptionFilter
               includedOptions={includedOptions}
               excludedOptions={excludedOptions}
               visibleSection={visibleSection}
+              searchInput={searchInput}
+              onSearchInputChange={handleSearchInputChange}
+              onSearchInputKeyPress={handleSearchInputKeyPress}
               onToggleVisibility={toggleVisibility}
               onRemoveOption={removeOption}
               onClearOptionFilters={clearOptionFilters} // Pass function for clearing specific option filters
               onToggleOption={toggleOption}
+              onHandleCheckboxChange={handleCheckboxChange}
               optionsList={countries}
               icon={MapPin}
               label="Country"
@@ -210,14 +215,18 @@ const LeadSearchFilter = () => {
             />
 
             {/* Name Option */}
-            <OptionFilterNoSearch
+            <OptionFilter
               includedOptions={includedOptions}
               excludedOptions={excludedOptions}
               visibleSection={visibleSection}
+              searchInput={searchInput}
+              onSearchInputChange={handleSearchInputChange}
+              onSearchInputKeyPress={handleSearchInputKeyPress}
               onToggleVisibility={toggleVisibility}
               onRemoveOption={removeOption}
               onClearOptionFilters={clearOptionFilters} // Pass function for clearing specific option filters
               onToggleOption={toggleOption}
+              onHandleCheckboxChange={handleCheckboxChange}
               optionsList={names}
               icon={UserRoundSearch}
               label="Name"
