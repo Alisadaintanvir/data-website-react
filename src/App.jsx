@@ -36,16 +36,16 @@ export default function App() {
       />
       <Routes>
         {/* Default route */}
-        <Route path="/" element={<Navigate to="/dashboard" />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/search" element={<SearchSection />} />
-        <Route path="/contacts" element={<ContactsSection />} />
-        <Route path="/lists" element={<Lists />} />
-        <Route path="/companies" element={<Company />} />
-        <Route path="/enrich" element={<Enrich />} />
-        <Route path="/verify" element={<Verify />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/import" element={<Import />} />
+        <Route path="/data-website-react/" element={<Navigate to="/data-website-react/dashboard" />} />
+        <Route path="/data-website-react/dashboard" element={<Dashboard />} />
+        <Route path="/data-website-react/search" element={<SearchSection />} />
+        <Route path="/data-website-react/contacts" element={<ContactsSection />} />
+        <Route path="/data-website-react/lists" element={<Lists />} />
+        <Route path="/data-website-react/companies" element={<Company />} />
+        <Route path="/data-website-react/enrich" element={<Enrich />} />
+        <Route path="/data-website-react/verify" element={<Verify />} />
+        <Route path="/data-website-react/settings" element={<Settings />} />
+        <Route path="/data-website-react/import" element={<Import />} />
       </Routes>
 
       {/* Profile overlay */}
