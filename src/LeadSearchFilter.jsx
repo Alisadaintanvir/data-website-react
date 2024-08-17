@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { MapPin, UserRoundSearch, CircleArrowOutUpLeft } from 'lucide-react';
-import OptionFilter from './OptionFilter';
+import OptionFilterNoSearch from './OptionFilterNoSearch'; // Import the new component
 import YearFilter from './YearFilter';
 
 const LeadSearchFilter = () => {
@@ -46,6 +46,17 @@ const LeadSearchFilter = () => {
     setExcludedOptions((prev) => ({
       ...prev,
       [section]: prev[section].filter((item) => item !== option),
+    }));
+  };
+
+  const clearOptionFilters = (section) => {
+    setIncludedOptions((prev) => ({
+      ...prev,
+      [section]: [],
+    }));
+    setExcludedOptions((prev) => ({
+      ...prev,
+      [section]: [],
     }));
   };
 
@@ -184,18 +195,14 @@ const LeadSearchFilter = () => {
           </div>
           <div className="filter-options font-medium mb-5">
             {/* Country Option */}
-            <OptionFilter
+            <OptionFilterNoSearch
               includedOptions={includedOptions}
               excludedOptions={excludedOptions}
               visibleSection={visibleSection}
-              searchInput={searchInput}
-              onSearchInputChange={handleSearchInputChange}
-              onSearchInputKeyPress={handleSearchInputKeyPress}
               onToggleVisibility={toggleVisibility}
               onRemoveOption={removeOption}
-              onClearAllOptions={clearAllOptions}
+              onClearOptionFilters={clearOptionFilters} // Pass function for clearing specific option filters
               onToggleOption={toggleOption}
-              onHandleCheckboxChange={handleCheckboxChange}
               optionsList={countries}
               icon={MapPin}
               label="Country"
@@ -203,18 +210,14 @@ const LeadSearchFilter = () => {
             />
 
             {/* Name Option */}
-            <OptionFilter
+            <OptionFilterNoSearch
               includedOptions={includedOptions}
               excludedOptions={excludedOptions}
               visibleSection={visibleSection}
-              searchInput={searchInput}
-              onSearchInputChange={handleSearchInputChange}
-              onSearchInputKeyPress={handleSearchInputKeyPress}
               onToggleVisibility={toggleVisibility}
               onRemoveOption={removeOption}
-              onClearAllOptions={clearAllOptions}
+              onClearOptionFilters={clearOptionFilters} // Pass function for clearing specific option filters
               onToggleOption={toggleOption}
-              onHandleCheckboxChange={handleCheckboxChange}
               optionsList={names}
               icon={UserRoundSearch}
               label="Name"
@@ -222,18 +225,14 @@ const LeadSearchFilter = () => {
             />
 
             {/* Gender Option */}
-            <OptionFilter
+            <OptionFilterNoSearch
               includedOptions={includedOptions}
               excludedOptions={excludedOptions}
               visibleSection={visibleSection}
-              searchInput={searchInput}
-              onSearchInputChange={handleSearchInputChange}
-              onSearchInputKeyPress={handleSearchInputKeyPress}
               onToggleVisibility={toggleVisibility}
               onRemoveOption={removeOption}
-              onClearAllOptions={clearAllOptions}
+              onClearOptionFilters={clearOptionFilters} // Pass function for clearing specific option filters
               onToggleOption={toggleOption}
-              onHandleCheckboxChange={handleCheckboxChange}
               optionsList={genders}
               icon={CircleArrowOutUpLeft}
               label="Gender"

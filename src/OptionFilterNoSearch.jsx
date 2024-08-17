@@ -1,17 +1,13 @@
 import { ChevronDown, ChevronUp, CircleOff, X, Plus } from 'lucide-react';
 
-const OptionFilter = ({
+const OptionFilterNoSearch = ({
   includedOptions,
   excludedOptions,
   visibleSection,
-  searchInput,
-  onSearchInputChange,
-  onSearchInputKeyPress,
   onToggleVisibility,
   onRemoveOption,
-  onClearOptionFilters, // Updated prop to clear specific option filters
+  onClearOptionFilters, // Prop to clear specific option filters
   onToggleOption,
-  onHandleCheckboxChange,
   optionsList,
   icon: Icon,
   label,
@@ -113,16 +109,6 @@ const OptionFilter = ({
 
         {visibleSection === optionType && (
           <div id={`lead-${optionType}-results`} className="search-results shadow-md left-7 bg-white p-4 border">
-            <div className="search-bar mb-2">
-              <input
-                className="search-bar-input w-full p-1 border border-gray-300 rounded shadow-sm font-normal"
-                type="text"
-                placeholder={`Add ${label}`}
-                value={searchInput}
-                onChange={(e) => onSearchInputChange(e)}
-                onKeyDown={(e) => onSearchInputKeyPress(e, optionType)}
-              />
-            </div>
             <ul className="max-h-44 overflow-y-scroll font-normal ml-1">
               {optionsList.map((option) => (
                 <li
@@ -134,7 +120,7 @@ const OptionFilter = ({
                       className={`${optionType}-checkbox mr-2 cursor-pointer`}
                       type="checkbox"
                       checked={includedOptions[optionType]?.includes(option)}
-                      onChange={(e) => onHandleCheckboxChange(optionType, option, e.target.checked)}
+                      onChange={(e) => onToggleOption(optionType, option, e.target.checked)}
                     />
                     <span className="checkmark font-semibold text-gray-700">{option}</span>
                   </label>
@@ -149,4 +135,4 @@ const OptionFilter = ({
   );
 };
 
-export default OptionFilter;
+export default OptionFilterNoSearch;
