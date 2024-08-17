@@ -144,7 +144,6 @@ const LeadSearchFilter = () => {
     };
   }, []);
 
-  const getCount = (section) => includedOptions[section].length;
 
   // Calculate total number of filters applied
   const totalFiltersApplied = Object.values(includedOptions).flat().length;
@@ -173,7 +172,7 @@ const LeadSearchFilter = () => {
   return (
     <section id="lead-section" className="lead-section ml-3 mt-3" ref={filterRef}>
       <div id="lead-section-div" className="lead-section-div">
-        <div className="left-lead-section w-72 h-[480px] overflow-y-scroll">
+        <div className="left-lead-section w-72 h-[520px] overflow-y-scroll">
           <div className="filter-title flex justify-between items-baseline p-4 bg-white border-b border-gray-100 text-[#071427] font-semibold">
             <span className='text-xl'>Filter</span>
 

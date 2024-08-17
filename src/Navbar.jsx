@@ -21,7 +21,7 @@ const Navbar = ({ onProfileClick, onNotificationsClick }) => {
   ];
 
   return (
-    <nav className="w-full h-12 flex justify-between items-center py-0 px-4 bg-[#1c2548] text-blue-400 sticky top-0">
+    <nav className="w-full h-12 flex justify-between items-center py-0 px-4 bg-[#1c2548] text-blue-400 sticky top-0 z-50">
       <div className="flex items-center">
         <div className="text-2xl font-bold xl:ml-4 mr-2 lg:mr-4 cursor-pointer" onClick={() => window.location.href = '/dashboard'}>LOGO</div>
         <div
