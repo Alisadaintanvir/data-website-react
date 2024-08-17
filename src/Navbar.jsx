@@ -21,9 +21,9 @@ const Navbar = ({ onProfileClick, onNotificationsClick }) => {
   ];
 
   return (
-    <nav className="w-full h-12 flex justify-between items-center py-0 px-4 bg-[#1c2548] text-blue-400 sticky top-0 z-50">
+    <nav className="w-full h-12 flex justify-between items-center py-0 px-4 bg-[#1c2548] text-blue-400 sticky top-0 z-40">
       <div className="flex items-center">
-        <div className="text-2xl font-bold xl:ml-4 mr-2 lg:mr-4 cursor-pointer" onClick={() => window.location.href = '/dashboard'}>LOGO</div>
+        <NavLink to='/dashboard' className="text-2xl font-bold xl:ml-4 mr-2 lg:mr-4 cursor-pointer">LOGO</NavLink>
         <div
           className={`fixed top-0 w-60 md:w-80 p-4 lg:p-0 right-0 h-full bg-[#1c2548] transition-transform ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -61,7 +61,7 @@ const Navbar = ({ onProfileClick, onNotificationsClick }) => {
         </span>
         <Search size={23} className="cursor-pointer text-white" onClick={handleSearchClick} />
         <Bell size={23} className="cursor-pointer text-white" onClick={onNotificationsClick} />
-        <Settings size={23} className="cursor-pointer text-white" onClick={() => window.location.href = '/settings'} />
+        <NavLink to='/settings'> <Settings size={23} className="cursor-pointer text-white" /></NavLink>
         <CircleUser size={23} className="cursor-pointer text-white" onClick={onProfileClick} />
       </div>
     </nav>

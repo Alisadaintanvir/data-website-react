@@ -56,8 +56,8 @@ export default function LeadTable() {
                   <div className="flex items-center">
                     <input type="checkbox" className="lead-checkbox ml-2 mr-4" />
                     <div className="contact-info flex">
-                      <div className="flex items-start mt-2 mr-2">
-                        <span className='bg-blue-300 flex justify-center items-center text-white text-xs h-6 w-6 rounded-full'>BR</span>
+                      <div className="flex items-start mt-1 mr-2">
+                        <span className='bg-blue-500 flex justify-center items-center text-white text-xs h-7 w-7 rounded-full'>BR</span>
                       </div>
                       <div className="contact-name">
                         <span className="item-name-lead text-[14px] font-semibold mr-2">
@@ -68,7 +68,7 @@ export default function LeadTable() {
                           Web Developer
                         </span>
                       </div>
-                      <div className='bg-blue-600 text-white text-xs mt-1 text-center h-[15px] w-[15px] rounded-sm font-semibold'>in</div>
+                      <div className='bg-gray-600 text-white text-xs mt-1 text-center h-[15px] w-[15px] rounded-sm font-semibold'>in</div>
                     </div>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export default function LeadTable() {
 
               <td className="py-3 border-b text-gray-800 font-semibold whitespace-nowrap">
               <div className='flex'>
-                <img src='./vite.svg' className='w-5'></img>
+                <img src='../public/vite.svg' className='w-5'></img>
               <span className='ml-2'>Tic limited</span>
               </div>
               </td>
@@ -86,7 +86,7 @@ export default function LeadTable() {
                     type="button"
                     className="show-email-btn flex items-center text-sm text-gray-700 font-medium px-2 py-1 rounded-sm border border-gray-300"
                   >
-                    <MailCheck size={16} className='mr-[7px] text-green-600'/><span>Show email</span>
+                    <MailCheck size={16} className='mr-[7px] text-blue-600'/><span>Show email</span>
                   </button>
                 </div>
               </td>
@@ -95,7 +95,7 @@ export default function LeadTable() {
                   type="button"
                   className="show-email-btn flex items-center text-sm text-gray-700 font-medium px-2 py-1 rounded-sm border border-gray-300"
                 >
-                  <PhoneOutgoing size={16} className='mr-[7px] text-green-600'/><span>Show phone</span>
+                  <PhoneOutgoing size={16} className='mr-[7px] text-blue-600'/><span>Show phone</span>
                 </button>
               </td>
               <td className="py-3 border-b whitespace-nowrap">New York</td>
