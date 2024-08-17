@@ -2,7 +2,7 @@ import { MailCheck, PhoneOutgoing, ChevronsUpDown } from 'lucide-react';
 
 export default function LeadTable() {
   return (
-    <div className="lead-table-div overflow-x-auto w-[1034px] border border-gray-300">
+    <div className="lead-table-div overflow-x-auto w-[1017px] border border-gray-300">
       <table className="lead-table text-left bg-white min-w-[1500px] table-fixed text-gray-800">
         <thead className="border-b">
           <tr>
