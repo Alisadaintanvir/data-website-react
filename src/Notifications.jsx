@@ -42,7 +42,7 @@ const Notifications = ({ isVisible, toggleVisibility }) => {
   return (
     <section
       ref={sectionRef}
-      className={`fixed top-0 right-0 h-screen w-[420px] bg-white shadow-lg transform transition-transform ease-out duration-300 ${
+      className={`fixed top-0 right-0 h-screen w-[420px] bg-white shadow-lg transform transition-transform ease-out duration-300 z-40 ${
         isAnimating ? 'translate-x-0' : 'translate-x-full'
       }`}
     >

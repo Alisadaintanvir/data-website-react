@@ -39,7 +39,7 @@ const Contacts = ({ toggleSec, toggleCreateNewProperty, toggleCreateNewContact, 
             <div className=' sm:ml-0 ml-[250px]'><Filter size={20} onClick={toggleVisibility} className='sm:hidden cursor-pointer mt-2 text-lg'/></div>
             
             
-            <div  className={`absolute sm:flex w-full sm:w-auto top-0 left-0 p h-full sm:relative bg-white transition-all duration-300 ${
+            <div  className={`absolute z-50 sm:flex w-full sm:w-auto top-0 left-0 p h-full sm:relative bg-white transition-all duration-300 ${
               isOpen ? 'block' : 'hidden'
             }`}>
             

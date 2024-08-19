@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp, CircleOff, X, Plus } from 'lucide-react';
+import { Lock, CircleOff, X, Plus } from 'lucide-react';
 
 const OptionFilterNoSearch = ({
   includedOptions,
@@ -19,7 +19,7 @@ const OptionFilterNoSearch = ({
     <div className="group">
       <div className="border border-gray-100">
         <div
-          className="filter-option flex justify-between items-center p-3 text-[#071427] bg-white rounded cursor-pointer"
+          className="filter-option flex justify-between items-center p-3 text-[#071427] bg-blue-50 rounded cursor-pointer"
           onClick={() => onToggleVisibility(optionType)}
         >
           <span className="flex items-center">
@@ -36,14 +36,14 @@ const OptionFilterNoSearch = ({
               </span>
             )}
             {visibleSection === optionType ? (
-              <ChevronUp
-                size={18}
-                className="group-hover:bg-blue-50 rounded-full group-hover:text-blue-600 transition duration-200"
+              <Lock
+                size={19}
+                className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full text-white transition duration-200 p-1"
               />
             ) : (
-              <ChevronDown
-                size={18}
-                className="group-hover:bg-blue-50 rounded-full group-hover:text-blue-600 transition duration-200"
+              <Lock
+                size={19}
+                className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full text-white transition duration-200 p-1"
               />
             )}
           </div>

@@ -21,9 +21,9 @@ const Navbar = ({ onProfileClick, onNotificationsClick }) => {
   ];
 
   return (
-    <nav className="w-full h-12 flex justify-between items-center py-0 px-4 bg-[#1c2548] text-blue-400 sticky top-0">
+    <nav className="w-full h-12 flex justify-between items-center py-0 px-4 bg-[#1c2548] text-blue-400 sticky top-0 z-40">
       <div className="flex items-center">
-        <div className="text-2xl font-bold xl:ml-4 mr-2 lg:mr-4 cursor-pointer" onClick={() => window.location.href = '/dashboard'}>LOGO</div>
+        <NavLink to='/dashboard' className="text-2xl font-bold xl:ml-4 mr-2 lg:mr-4 cursor-pointer">LOGO</NavLink>
         <div
           className={`fixed top-0 w-60 md:w-80 p-4 lg:p-0 right-0 h-full bg-[#1c2548] transition-transform ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -53,15 +53,18 @@ const Navbar = ({ onProfileClick, onNotificationsClick }) => {
       </div>
 
       <div className="flex items-center gap-4">
-        <span className={`${isVisible ? 'flex' : 'hidden'} w-60 bg-white rounded-sm py-1 px-2 border border-blue-500`}>
+        <span className='hidden sm:flex mr-[-2px] mb-[1px]'>
+        <span className={`${isVisible ? 'flex' : 'hidden'} w-60 mr-2 bg-white rounded-sm py-1 px-2 border border-blue-500`}>
           <span>
             <Search size={14} className="flex items-center cursor-pointer text-blue-700 mt-1" />
           </span>
           <input type="text" className="pl-4 focus:outline-none focus:border-none placeholder-opacity-50 text-sm" placeholder='Type your query' />
         </span>
-        <Search size={23} className="cursor-pointer text-white" onClick={handleSearchClick} />
+        
+        <Search size={31} className="cursor-pointer text-white py-1" onClick={handleSearchClick} />
+        </span>
         <Bell size={23} className="cursor-pointer text-white" onClick={onNotificationsClick} />
-        <Settings size={23} className="cursor-pointer text-white" onClick={() => window.location.href = '/settings'} />
+        <NavLink to='/settings'> <Settings size={23} className="cursor-pointer text-white" /></NavLink>
         <CircleUser size={23} className="cursor-pointer text-white" onClick={onProfileClick} />
       </div>
     </nav>

@@ -28,10 +28,10 @@ export default function SearchSection(){
               <div className='flex justify-between'><div className=''>Filter</div><X onClick={toggleVisibility} className='cursor-pointer'/></div>
               
             </div>
-            <div  className="text-[13px] mx-4 sm:mx-0 sm:mr-0 sm:border border-gray-300 py-4 sm:py-[5px] px-4 w-24 text-center rounded-l-[4px] shadow-sm cursor-pointer hover:bg-sky-100 sm:hover:bg-white sm:hover:text-sky-500 hover:border-sky-500 transition-colors duration-500">Leads</div>
-            <div className="text-[13px] mx-4 sm:mx-0 sm:mr-3 sm:border border-gray-300 py-4 sm:py-[5px] px-4 w-24 text-center rounded-r-[4px] shadow-sm cursor-pointer hover:bg-sky-100 sm:hover:bg-white sm:hover:text-sky-500 hover:border-sky-500 transition-colors duration-500">Companies</div>
-            <div className="text-[13px] mx-4 sm:mx-0 sm:mr-3 sm:border border-gray-300 py-4 sm:py-[5px] px-4 rounded-[4px] shadow-sm cursor-pointer hover:bg-sky-100 sm:hover:bg-white sm:hover:text-sky-500 hover:border-sky-500 transition-colors duration-500">Saved search</div>
-            <div  className="text-[13px] mx-4 sm:mx-0 sm:mr-3 sm:border border-gray-300 py-4 sm:py-[5px] px-4 rounded-[4px] shadow-sm cursor-pointer hover:bg-sky-100 sm:hover:bg-white sm:hover:text-sky-500 hover:border-sky-500 transition-colors duration-500">Recent activity</div>
+            <div  className="text-[13px] mx-4 sm:mx-0 sm:mr-0 sm:border border-gray-400 py-3 sm:py-[5px] px-4 w-24 text-center rounded-l-[2px] cursor-pointer hover:bg-sky-100 sm:hover:bg-white sm:hover:text-sky-500 hover:border-blue-500 transition-colors duration-500">Leads</div>
+            <div className="text-[13px] mx-4 sm:mx-0 sm:mr-3 sm:border-y sm:border-r border-gray-400 py-3 sm:py-[5px] px-4 w-24 text-center rounded-r-[2px] cursor-pointer hover:bg-sky-100 sm:hover:bg-white sm:hover:text-sky-500 hover:border-blue-500 transition-colors duration-500">Companies</div>
+            <div className="text-[13px] mx-4 sm:mx-0 sm:mr-3 sm:border border-gray-400 py-3 sm:py-[5px] px-4 rounded-[2px] cursor-pointer hover:bg-sky-100 sm:hover:bg-white sm:hover:text-sky-500 hover:border-blue-500 transition-colors duration-500">Saved search</div>
+            <div  className="text-[13px] mx-4 sm:mx-0 sm:mr-3 sm:border border-gray-400 py-3 sm:py-[5px] px-4 rounded-[2px] cursor-pointer hover:bg-sky-100 sm:hover:bg-white sm:hover:text-sky-500 hover:border-blue-500 transition-colors duration-500">Recent activity</div>
 
           </div>
           </div>

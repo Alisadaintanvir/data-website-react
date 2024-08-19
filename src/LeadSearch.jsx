@@ -1,12 +1,12 @@
 import LeadSearchFilter from "./LeadSearchFilter";
-import LeadTable from "./LeadTable";
+import LeadRightSec from "./LeadRightSec";
 
 
 export default function LeadsSearch(){
     return(
-        <div className="flex">
+        <div className="flex h-[100vh] bg-gray-50 overflow-y-hidden">
             <LeadSearchFilter />
-            <LeadTable/>
+            <LeadRightSec/>
         </div>
     );
 }

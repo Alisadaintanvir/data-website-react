@@ -36,7 +36,7 @@ export default function App() {
       />
       <Routes>
         {/* Default route */}
-        <Route path="/" element={<Navigate to="/dashboard" />} />
+        <Route path="/data-website-react/" element={<Navigate to="/dashboard" />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/search" element={<SearchSection />} />
         <Route path="/contacts" element={<ContactsSection />} />
