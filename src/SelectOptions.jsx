@@ -5,7 +5,7 @@ export default function SelectOptions({dropdownRef, isAdvanceVisible, handleAdva
     return(
         <div
         ref={dropdownRef}
-        className='select-options border absolute z-30 bg-white shadow-md top-48 left-52 w-72 font-semibold text-md'
+        className='select-options border absolute z-30 bg-white shadow-md top-[157px] left-52 w-72 font-semibold text-md'
       >
         <div className='py-2 mt-2 border-b px-4'>Select this page</div>
         <div className='py-2 border-b px-4 flex justify-between items-center'>
