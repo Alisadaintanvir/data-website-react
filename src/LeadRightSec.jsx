@@ -83,21 +83,15 @@ const LeadRightSec = () => {
   };
 
   return (
-    <div className="right-company-section w-full mt-4 mx-4">
-      <div className="lead-head flex justify-between items-center px-2 pb-3">
-        <div className="flex space-x-5 items-center font-medium text-[15px] text-gray-600">
-          <span className="total-leads font-normal flex"><PackagePlus size={21} className='mr-2 text-blue-500'/><span>New (6,000)</span></span>
-          <span className="total-leads font-normal flex"><Save size={20} className='mr-2 text-blue-500'/><span>Saved (1,23)</span></span>
-          <span className="total-leads font-normal flex"><Database size={20} className='mr-2 text-blue-500'/><span>Total (56,000)</span></span>
-        </div>
-      </div>
+    <div className="right-company-section w-full mt-3 mx-4 overflow-y-hidden">
+      
 
       <div className="lead-head flex justify-between items-center bg-white border-x border-t px-2 py-2">
         <div className='lead-click-advance flex items-center'>
           <button
             onClick={(e) => handleSelectClick(e)}
             ref={toggleRef}
-            className='toggle-button flex relative cursor-pointer items-center h-6 justify-center bg-gray-200 ml-2 mr-4 rounded-sm'
+            className='toggle-button flex relative cursor-pointer items-center h-[25px] justify-center bg-gray-200 ml-2 mr-4 rounded-sm'
           >
             <input type="checkbox" className="lead-checkbox-all ml-[4px]" />
             <ChevronDown size={18} className='ml-[2px] mr-[1px]'/>
@@ -116,9 +110,13 @@ const LeadRightSec = () => {
           )}
 
           <span className='border-l cursor-pointer'>
-            <span className='btn bg-blue-500 text-white rounded px-3 py-1 ml-4 flex items-center'>
-              <ArrowDownToLine size={17} className='mr-2'/><span className="">Save all</span>
-            </span>
+          <div className="lead-head flex justify-between items-center px-2">
+          <div className="flex space-x-5 items-center font-medium text-[15px] text-gray-600">
+            <span className="total-leads font-normal flex"><PackagePlus size={21} className='mr-2 text-blue-500'/><span>New (6,000)</span></span>
+            <span className="total-leads font-normal flex"><Save size={20} className='mr-2 text-blue-500'/><span>Saved (1,23)</span></span>
+            <span className="total-leads font-normal flex"><Database size={20} className='mr-2 text-blue-500'/><span>Total (56,000)</span></span>
+          </div>
+        </div>
           </span>
         </div>
 

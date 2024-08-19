@@ -53,13 +53,16 @@ const Navbar = ({ onProfileClick, onNotificationsClick }) => {
       </div>
 
       <div className="flex items-center gap-4">
-        <span className={`${isVisible ? 'flex' : 'hidden'} w-60 bg-white rounded-sm py-1 px-2 border border-blue-500`}>
+        <span className='hidden sm:flex mr-[-2px] mb-[1px]'>
+        <span className={`${isVisible ? 'flex' : 'hidden'} w-60 mr-2 bg-white rounded-sm py-1 px-2 border border-blue-500`}>
           <span>
             <Search size={14} className="flex items-center cursor-pointer text-blue-700 mt-1" />
           </span>
           <input type="text" className="pl-4 focus:outline-none focus:border-none placeholder-opacity-50 text-sm" placeholder='Type your query' />
         </span>
-        <Search size={23} className="cursor-pointer text-white" onClick={handleSearchClick} />
+        
+        <Search size={31} className="cursor-pointer text-white py-1" onClick={handleSearchClick} />
+        </span>
         <Bell size={23} className="cursor-pointer text-white" onClick={onNotificationsClick} />
         <NavLink to='/settings'> <Settings size={23} className="cursor-pointer text-white" /></NavLink>
         <CircleUser size={23} className="cursor-pointer text-white" onClick={onProfileClick} />
