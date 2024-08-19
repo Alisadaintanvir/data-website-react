@@ -6,7 +6,7 @@ export default function LeadTable() {
   return (
     <div className="lead-table-div overflow-x-scroll border border-gray-300">
       <table className="lead-table text-left bg-white min-w-[1500px] table-fixed text-gray-800">
-        <thead className="border-b text-sm">
+        <thead className="border-b text-xs">
           <tr>
             <th className="pl-4 py-2 font-normal w-[200px] sticky left-0 bg-white z-10">
                 <div className='flex items-center'>
@@ -52,7 +52,7 @@ export default function LeadTable() {
         </thead>
         <tbody className=''>
           {[1, 2].map((row) => (
-            <tr key={row} className="hover:bg-gray-50 group text-[15px]">
+            <tr key={row} className="hover:bg-gray-50 group text-[14px]">
               <td className="py-3 pr-4 border-y whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50 z-10 shadow">
                 <div className="contact-row flex items-center justify-between">
                   <div className="flex items-center">
@@ -70,7 +70,7 @@ export default function LeadTable() {
                           Web Developer
                         </span>
                       </div>
-                      <div className='bg-gray-600 text-white text-xs mt-[5px] cursor-pointer transition-colors delay-50 hover:bg-blue-600 text-center h-[15px] w-[15px] rounded-sm font-semibold'>in</div>
+                      <div className='bg-gray-600 transition-colors delay-75 hover:bg-blue-600 text-white text-xs mt-[5px] cursor-pointer text-center h-[15px] w-[15px] rounded-sm font-semibold'>in</div>
                     </div>
                   </div>
                 </div>
@@ -92,7 +92,7 @@ export default function LeadTable() {
                     type="button"
                     className="show-email-btn flex items-center text-sm text-gray-700 font-medium px-2 py-1 rounded-sm border border-gray-300"
                   >
-                    <MailCheck size={16} className='mr-[7px] text-blue-600'/><span>Show email</span>
+                    <MailCheck size={16} className='mr-[7px] text-blue-600 text-[14px]'/><span>Show email</span>
                   </button>
                 </div>
               </td>
@@ -101,7 +101,7 @@ export default function LeadTable() {
                   type="button"
                   className="show-email-btn flex items-center text-sm text-gray-700 font-medium px-2 py-1 rounded-sm border border-gray-300"
                 >
-                  <PhoneOutgoing size={16} className='mr-[7px] text-blue-600'/><span>Show phone</span>
+                  <PhoneOutgoing size={16} className='mr-[7px] text-blue-600 text-[14px]'/><span>Show phone</span>
                 </button>
               </td>
               <td className="py-3 border-b whitespace-nowrap">New York</td>
